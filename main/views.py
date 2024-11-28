@@ -19,7 +19,7 @@ def about(request):
     context: dict = {
         'title': 'О нас',
         'content': "О нас",
-        "text_on_page": "ddsadasdasdasdasdasdasdasdasd" 
+        "text_on_page": "" 
     }
     
     return render(request, 'main/about.html', context)
