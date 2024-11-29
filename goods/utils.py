@@ -1,3 +1,5 @@
+from django.db.models import Q
+
 from goods.models import Products
 
 
