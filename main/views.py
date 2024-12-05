@@ -10,7 +10,7 @@ def index(request):
     
     context: dict = {
         'title': 'Home - Главная',
-        'content': "Магазин мебели HOME",
+        'content': "",
     }
     
     return render(request, 'main/index.html', context)
