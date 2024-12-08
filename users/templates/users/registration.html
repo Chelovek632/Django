@@ -4,8 +4,8 @@
 {% block content %}
 <div class="row">
     <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-9 bg-white p-4 mb-5 mx-2 rounded custom-shadow">
+        <div class="row justify-content-center " >
+            <div class="col-md-9 bg-white p-4 mb-5 mx-2 rounded custom-shadow border border-3 border-success">
                 <h2 class="text-center mb-4">Регистрация</h2>
                 <form action="{% url 'user:registration' %}" method="post">
                     {% csrf_token %}
@@ -53,7 +53,7 @@
                             {% endif %}
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-dark btn-block">Зарегистрироваться</button>
+                    <button type="submit" class="btn btn-dark border border-3 border-success  btn-outline-success text-white">Зарегистрироваться</button>
                 </form>
             </div>
         </div>

@@ -18,7 +18,7 @@ def index(request):
 def about(request):
     context: dict = {
         'title': 'О нас',
-        'content': "О нас",
+        'content': "Влад Китенко хочет есть",
         "text_on_page": "" 
     }
     
