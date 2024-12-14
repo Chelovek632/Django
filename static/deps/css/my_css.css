@@ -7,6 +7,8 @@ body {
   height: 100%;
 }
 
+
+
 .dropdown-toggle::after {
   content: none;
 }
@@ -38,4 +40,115 @@ body {
 }
 .border-primary-custom {
   border-color: #77ff33 !important; /* Новый цвет рамки */
+}
+.navbar-text-items {
+  margin-left: 450px; /* Отступ для сдвига текста вправо */
+}
+
+.bg-beige {
+  background-color: beige;
+}
+.btn-beige {
+  background-color: #f5f5dc; /* светлый бежевый цвет */
+  color: #000; /* черный текст */
+  border: 1px solid #ccc; /* светлая граница */
+}
+
+/* Останавливаем изменение цвета при наведении */
+.btn-beige:hover {
+  background-color: #f5f5dc; /* оставляем тот же бежевый цвет */
+  color: #000; /* черный текст */
+  border: 1px solid #ccc; /* оставляем границу */
+}
+/* Отменяем изменение фона при наведении на элементы в выпадающем меню */
+.dropdown-menu .dropdown-item:hover {
+  background-color: transparent !important; /* Прозрачный фон при наведении */
+  color: #000 !important; /* Черный цвет текста при наведении */
+}
+
+
+
+.nav-link:hover {
+  color: #000 !important; /* Черный текст при наведении */
+}
+
+/* Убираем изменение фона при наведении на активный элемент */
+.nav-item.active {
+  background-color: #f5f5dc !important; /* Сохраняем бежевый фон для активного элемента */
+}
+/* Стиль для чекбокса в неактивном состоянии */
+.form-check-input {
+  background-color: #ffffff; /* Белый фон для неотмеченного чекбокса */
+  border-color: #ccc; /* Светлая граница */
+}
+
+/* Когда чекбокс отмечен */
+.form-check-input:checked {
+  background-color: #007bff; /* Синий фон при активном чекбоксе */
+  border-color: #007bff; /* Синяя граница */
+}
+
+/* Когда пользователь наводит курсор на чекбокс */
+.form-check-input:hover {
+  background-color: #0056b3; /* Темно-синий фон при наведении */
+  border-color: #0056b3; /* Темно-синяя граница при наведении */
+}
+
+/* Убираем стандартный стиль фокуса, если нужно */
+.form-check-input:focus {
+  box-shadow: none; /* Убираем фокусное кольцо */
+}
+/* Зеленый фон при наведении */
+.btn-outline-primary:hover {
+  background-color: #28a745 !important; /* Зеленый фон */
+  color: white !important; /* Белый текст */
+  border-color: #28a745 !important; /* Зеленая граница */
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.section-header {
+  text-align: center;
+  color: #4CAF50;
+  margin-bottom: 40px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.card-text {
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  background-color: #4CAF50;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+.contact-info {
+  line-height: 1.8;
 }

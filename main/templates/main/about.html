@@ -4,7 +4,43 @@
 
 
 {% block content %}
-    <h2 class="mt-5 pt-5"><strong>{{ content }}</strong></h2>
-    <p>{{ text_on_page }}</p>
+    {% comment %} <h2 class="mt-5 pt-5"><strong>{{ content }}</strong></h2>
+    <p>{{ text_on_page }}</p> {% endcomment %}
+    <div class="container py-5">
+        <!-- Section Header -->
+        <h2 class="section-header">О нас и Контакты</h2>
+
+        <!-- Row with two columns -->
+        <div class="row g-4">
+            <!-- About Us Section -->
+            <div class="col-lg-6">
+                <div class="card p-4">
+                    <div class="card-body">
+                        <h4 class="card-title">О нас</h4>
+                        <p class="card-text">
+                            Мы — команда профессионалов, занимающаяся созданием уютных и функциональных интерьеров. 
+                            Мы воплощаем в жизнь ваши мечты об идеальном пространстве, используя современные технологии 
+                            и экологически чистые материалы.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="col-lg-6">
+                <div class="card p-4">
+                    <div class="card-body">
+                        <h4 class="card-title">Наши контакты</h4>
+                        <p class="card-text contact-info">
+                            <strong>Адрес:</strong> ул. такая-та такая, 123, Кант, Бутапешт<br>
+                            <strong>Телефон:</strong> +7 (123) 456-78-90<br>
+                            <strong>Email:</strong> Chelovek@example.com
+                        </p>
+                        <a href="mailto:Chelovek@example.com" class="btn btn-primary">Написать нам</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock  %}
 

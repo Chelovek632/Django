@@ -23,56 +23,66 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-beige" data-bs-theme="dark">
             <div class="container">
-                <a class="navbar-brand" href="{% url "main:index" %}">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Логотип -->
+                <a class="navbar-brand navbar-text-items text-black" href="{% url 'main:index' %}">Home</a>
+                
+                <!-- Кнопка для мобильной версии -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
+                <!-- Основное меню -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Выпадающее меню "Информация" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-black" href="#" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
                                 Информация
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="#">Доставка и оплата</a></li>
-                                <li><a class="dropdown-item  text-white" href="#">Контактная информация</a></li>
-                                <li><a class="dropdown-item  text-white" href="{% url "main:about" %}">Про нас</a></li>
+                            <ul class="dropdown-menu bg-beige">
+                                <li><a class="dropdown-item text-black" href="#">Доставка и оплата</a></li>
+                                <li><a class="dropdown-item text-black" href="{% url 'main:about' %}">Про нас</a></li>
                             </ul>
-                        </li>
+                        </li>                        
+    
+                        <!-- Ссылка на корзину -->
                         <li class="nav-item">
-                            <a class="nav-link  text-white" href="{% url "user:users_cart" %}">Корзина</a>
+                            <a class="nav-link text-black" href="{% url 'user:users_cart' %}">Корзина</a>
                         </li>
+    
+                        <!-- Авторизация -->
                         {% if not user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link  text-white" href="{% url "users:login" %}">Войти</a>
+                            <a class="nav-link text-black" href="{% url 'users:login' %}">Войти</a>
                         </li>
                         {% else %}
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Выпадающее меню "Мой профиль" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-black" href="#" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
                                 Мой профиль
                             </a>
-                            <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
-                                <li><a class="dropdown-item  text-white" href="{% url "users:profile" %}">Личный кабинет</a></li>
+                            <ul class="dropdown-menu bg-beige">
+                                <li><a class="dropdown-item text-black" href="{% url 'users:profile' %}">Личный кабинет</a></li>
                                 {% if user.is_admin or user.is_staff %}
-                                <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Админ панель</a></li>
+                                <li><a class="dropdown-item text-black" href="{% url 'admin:index' %}">Админ панель</a></li>
                                 {% endif %}
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item  text-white" href="{% url "users:logout" %}">Выйти</a></li>
+                                <li><a class="dropdown-item text-black" href="{% url 'users:logout' %}">Выйти</a></li>
                             </ul>
                         </li>
                         {% endif %}
-
                     </ul>
-                    <form class="d-flex" role="search" action="{% url "catalog:search" %}" metho='get'>
-                        <input class="form-control me-2" type="search" name='q' placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success text-white" type="submit">Поиск</button>
+                    
+                    <!-- Форма поиска -->
+                    <form class="d-flex "  role="search" action="{% url 'catalog:search' %}" method="get">
+                        <input class="form-control me-2  text-black" type="search" name="q" placeholder="Search" aria-label="Search">
+                        <button class="btn  btn-outline-success text-black" type="submit">Поиск</button>
                     </form>
                 </div>
             </div>
@@ -86,27 +96,26 @@
             <div class="row mt-1 position-fixed z-3">
                 <!-- Каталог -->
                 <div class="dropdown mb-2">
-                    <button class="btn btn-dark border border-1 border-success  btn-outline-success text-white" type="button" data-bs-toggle="dropdown"
+                    <button class="btn btn-outline-primary btn-beige border border-1 border-success  btn-outline-success text-black" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Каталог
                         <img class="mx-1" src="{% static "deps/icons/grid-fill.svg" %}" alt="Catalog Icon" width="16"
                             height="16">
                     </button>
-                    <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
+                    <ul class="dropdown-menu bg-beige" data-bs-theme="dark">
                         {% tag_categories as categories %}
                         {% for category in categories %}
-                            <li><a class="dropdown-item text-white" href="{% url "catalog:index" category.slug %}">{{ category.name }}</a></li>
+                            <li><a class="dropdown-item text-black" href="{% url "catalog:index" category.slug %}">{{ category.name }}</a></li>
                         {% endfor %}
-
                     </ul>
                 </div>
                 <!-- Значек корзины, вызывает модальное окно -->
                 <div>
-                    <button type="button" class="btn btn-dark border border-1 border-success  btn-outline-success text-white d-flex" id="modalButton"
+                    <button type="button" class="btn btn-outline-primary btn-beige border border-1 border-success  btn-outline-success text-black d-flex" id="modalButton"
                         aria-expanded="false">
                         <img class="mx-1" src="{% static "deps/icons/basket2-fill.svg" %}" alt="Catalog Icon" width="24"
                             height="24">
-                        <span id="goods-in-cart-count">0</span>
+                        <span id="goods-in-cart-count">{{ carts.total_quantity }}</span>
                     </button>
                 </div>
                 <!-- Разметка модального окна корзины -->
@@ -125,7 +134,7 @@
                                     {% include "carts/includes/included_cart.html" %}
                                     <!-- Закончилась разметка корзины -->
                                 </div>
-                                <a class="btn btn-dark border border-1 border-success  btn-outline-success text-white" href="orders/create_order.html">
+                                <a class="btn btn-outline-primary btn-beige border border-1 border-success  btn-outline-success text-black" href="{% url "orders:create_order" %}">
                                     Оформить заказ
                                 </a>
                             </div>
@@ -151,7 +160,6 @@
     </section>
     <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
     <script src="{% static "deps/js/jquery-events.js" %}"></script>
-    <script src="{% static "deps/js/jquery-ajax.js" %}"></script>
     <script src="{% static "deps/js/bootstrap/bootstrap.bundle.min.js" %}"></script>
 </body>
 

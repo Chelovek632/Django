@@ -1,3 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-  <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<polygon style="fill:#446080;" points="178.087,133.565 200.348,512 311.652,512 333.913,133.565 "/>
+<polygon style="fill:#324860;" points="161.391,0 161.391,86.817 194.783,86.817 194.783,33.391 256,33.391 267.13,14.47 256,0 "/>
+<polygon style="fill:#263648;" points="256,0 256,33.391 317.217,33.391 317.217,86.817 350.609,86.817 350.609,0 "/>
+<rect x="89.043" y="133.565" style="fill:#6790BF;" width="111.304" height="378.435"/>
+<rect x="311.652" y="133.565" style="fill:#263648;" width="111.304" height="378.435"/>
+<polygon style="fill:#446080;" points="66.783,66.783 66.783,155.826 256,155.826 278.261,111.304 256,66.783 "/>
+<rect x="256" y="66.783" style="fill:#324860;" width="189.217" height="89.043"/>
 </svg>
